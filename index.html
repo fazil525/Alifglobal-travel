@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alif Global Travel & Tourism LLC. Explore our services including Airline Reservation, Inbound & Outbound Tours, and Visa Services in UAE & Oman.">
+    <title>Alif Global Travel & Tourism LLC</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="Alif Global Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="company-name">Alif Global</span>
+                    <span class="company-sub">Travel & Tourism LLC</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="btn btn-primary nav-cta">Book Now</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg">
+            <img src="assets/hero.png" alt="Dubai skyline and airplane">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text-box">
+                <h1 class="hero-title">Your Gateway to <br><span class="highlight">Global Exploration</span></h1>
+                <p class="hero-subtitle">Premium travel experiences, seamless visa services, and unforgettable tours across the UAE and worldwide.</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary btn-large">Explore Services</a>
+                    <a href="#contact" class="btn btn-outline btn-large">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Premium Services</h2>
+                <div class="divider"></div>
+                <p class="section-desc">We offer a comprehensive suite of travel solutions designed to make your journey effortless and extraordinary.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">✈️</div>
+                    <h3 class="service-title">Airline Reservation</h3>
+                    <p class="service-text">Seamless flight bookings to destinations worldwide with competitive pricing and excellent support.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">🌍</div>
+                    <h3 class="service-title">Inbound & Outbound Tours</h3>
+                    <p class="service-text">Curated travel packages and guided tours tailored to give you the most memorable experiences.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">🚌</div>
+                    <h3 class="service-title">Visa Change by Bus & Air</h3>
+                    <p class="service-text">Quick and reliable visa change services via bus to neighboring countries or by air.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">🛂</div>
+                    <h3 class="service-title">Tourist Visa – UAE & Oman</h3>
+                    <p class="service-text">Hassle-free tourist visa processing for visits to the United Arab Emirates and Oman.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon">🌐</div>
+                    <h3 class="service-title">Global Visa Services</h3>
+                    <p class="service-text">Expert assistance and processing for travel visas to numerous international destinations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <div class="contact-card glass-panel">
+                <div class="contact-info">
+                    <h2 class="contact-title">Ready for your next adventure?</h2>
+                    <p class="contact-desc">Reach out to our experts and let us handle the details while you enjoy the journey.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="icon">📞</span>
+                            <div>
+                                <span class="label">Contact No</span>
+                                <a href="tel:+971585846355" class="value">+971 585846355</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📧</span>
+                            <div>
+                                <span class="label">E-Mail</span>
+                                <a href="mailto:info@alifglobaltravels.com" class="value">info@alifglobaltravels.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="icon">📍</span>
+                            <div>
+                                <span class="label">Address</span>
+                                <span class="value">DIAMOND BUSINESS CENTER, AL BARSHA 2, DUBAI, UAE</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault(); alert('Message feature coming soon!');">
+                    <h3 class="form-title">Send a Message</h3>
+                    <div class="form-group">
+                        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" class="form-control" rows="4" placeholder="How can we help you?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Send Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Alif Global Logo" class="footer-logo">
+                    <p class="footer-text">Creating seamless and extraordinary travel experiences globally.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alif Global Travel & Tourism LLC. All Rights Reserved.</p>
+                <div class="alif-group">A subsidiary of <strong>Alif Group</strong></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
