@@ -70,7 +70,7 @@ const uaeTours = [
         duration: "Half Day",
         type: "Cultural",
         badgeColor: "#8b5cf6",
-        image: "https://images.pexels.com/photos/1569420/pexels-photo-1569420.jpeg?auto=compress&cs=tinysrgb&w=800",
+        image: "assets/grand-mosque.png",
         shortDesc: "A spiritual and architectural marvel featuring the world's largest hand-knotted carpet.",
         detailedDescription: "An absolute masterpiece of modern Islamic architecture and design. The Sheikh Zayed Grand Mosque is incredibly vast, accommodating over 40,000 worshippers. Adorned with 82 white marble domes, 24-carat gold chandeliers, and reflective pools, it stands as a monument to peace and tolerance. This guided tour offers deep insights into its construction and cultural significance.",
         fullPlan: [
@@ -91,7 +91,7 @@ const uaeTours = [
         duration: "2 Hours",
         type: "Must Try",
         badgeColor: "#e11d48",
-        image: "https://images.pexels.com/photos/12313627/pexels-photo-12313627.jpeg?auto=compress&cs=tinysrgb&w=800",
+        image: "assets/museum-future.png",
         shortDesc: "Journey to the year 2071 inside the most beautiful building on Earth.",
         detailedDescription: "The Museum of the Future is a visionary cultural institution set inside a stunning torus-shaped building inscribed with Arabic calligraphy. Unlike traditional museums that showcase the past, this immersive space predicts the future. Spanning multiple floors, guests explore interactive exhibits concerning space travel, climate change, spirituality, and advanced bio-engineering.",
         fullPlan: [
@@ -112,7 +112,7 @@ const uaeTours = [
         duration: "Full Day",
         type: "Theme Park",
         badgeColor: "#0ea5e9",
-        image: "https://images.unsplash.com/photo-1541348263662-e06836264be8?auto=format&fit=crop&w=600&q=80",
+        image: "assets/ferrari-world.png",
         shortDesc: "Home to Formula Rossa, the fastest rollercoaster in the world.",
         detailedDescription: "Located on Yas Island under a massive iconic red roof, Ferrari World Abu Dhabi is the first Ferrari-branded theme park. It is an adrenaline-fueled paradise combining high-speed rollercoasters with family-friendly attractions and incredible Italian dining. It perfectly captures the passion, excellence, and speed associated with the legendary racing brand.",
         fullPlan: [
@@ -133,7 +133,7 @@ const uaeTours = [
         duration: "3-4 Hours",
         type: "Cultural",
         badgeColor: "#8b5cf6",
-        image: "https://images.unsplash.com/photo-1563213038-1644cc62a5ee?auto=format&fit=crop&w=600&q=80",
+        image: "assets/louvre-ad.png",
         shortDesc: "A universal museum exploring shared human history under a breathtaking 'rain of light' dome.",
         detailedDescription: "The Louvre Abu Dhabi is a spectacular architectural feat designed by Jean Nouvel. The massive silver dome is constructed of 7,850 stars that filter sunlight perfectly into a 'rain of light'. The galleries are laid out chronologically across human history, bringing together ancient artifacts and modern art from different civilizations in the same space to highlight our shared humanity.",
         fullPlan: [
@@ -154,7 +154,7 @@ const uaeTours = [
         duration: "Evening (4+ Hours)",
         type: "Popular",
         badgeColor: "#f97316",
-        image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=600&q=80",
+        image: "assets/global-village.png",
         shortDesc: "A massive multi-cultural festival park combining shopping, dining, and extreme rides.",
         detailedDescription: "Global Village is the ultimate seasonal extravaganza in Dubai. Featuring around 30 pavilions representing over 90 different cultures, it is a shopping and dining paradise. You can buy authentic honey from Yemen, spices from Iran, crafts from Africa, and dine on exotic street food from across Asia and the Americas—all while watching spectacular live shows.",
         fullPlan: [
@@ -175,7 +175,7 @@ const uaeTours = [
         duration: "2-3 Hours",
         type: "Must Try",
         badgeColor: "#e11d48",
-        image: "https://images.unsplash.com/photo-1580838848777-62a3f01c7df0?auto=format&fit=crop&w=600&q=80",
+        image: "assets/miracle-garden.png",
         shortDesc: "Wander through 150 million blossoming flowers in the world's largest natural flower garden.",
         detailedDescription: "Opening only during Dubai's cooler months, the Miracle Garden is literally an oasis of color. It holds multiple Guinness World Records, including a life-size Emirates A380 airplane entirely covered in fresh flora. The incredible scent of millions of petunias and geraniums fills the air as you walk through heart-shaped arches and floral castles.",
         fullPlan: [
@@ -196,7 +196,7 @@ const uaeTours = [
         duration: "3 Hours",
         type: "Popular",
         badgeColor: "#f97316",
-        image: "https://images.unsplash.com/photo-1542385496-c11df5fb1413?auto=format&fit=crop&w=600&q=80",
+        image: "https://picsum.photos/seed/skidubai/600/400",
         shortDesc: "Swap the desert heat for sub-zero temperatures inside a massive indoor winter wonderland.",
         detailedDescription: "Located inside the Mall of the Emirates, Ski Dubai maintains a temperature of -1 to 2 degrees Celsius year-round. While it offers premium ski slopes, the Snow Park ticket is perfect for those who just want to play in the snow. Activities include the twin-track bobsled run, a snow cavern filled with interactive experiences, and giant zorbing balls.",
         fullPlan: [
@@ -217,7 +217,7 @@ const uaeTours = [
         duration: "1 Hour",
         type: "Must Try",
         badgeColor: "#e11d48",
-        image: "https://images.unsplash.com/photo-1512453979436-5a50ce8c6bc6?auto=format&fit=crop&w=600&q=80",
+        image: "https://picsum.photos/seed/aindubai/600/400",
         shortDesc: "Soar to 250m on the world's largest and highest observation wheel.",
         detailedDescription: "Standing taller than the High Roller in Vegas and the London Eye, Ain Dubai offers majestic, unhindered 360-degree views of the Dubai skyline, Palm Jumeirah, and the Arabian Gulf. The massive, luxurious, air-conditioned cabins provide an incredibly smooth rotation that takes approximately 38 minutes to complete.",
         fullPlan: [
@@ -238,7 +238,7 @@ const uaeTours = [
         duration: "2 Hours",
         type: "Romantic",
         badgeColor: "#10b981",
-        image: "https://images.unsplash.com/photo-1546412414-8035e1776c9a?auto=format&fit=crop&w=600&q=80",
+        image: "https://picsum.photos/seed/dhowcruise/600/400",
         shortDesc: "Sail through the illuminated Dubai Marina on a traditional wooden Dhow with a buffet dinner.",
         detailedDescription: "Combine the old with the new on a classic wooden Dhow boat that cruises through the futuristic canals of the Dubai Marina. This evening cruise offers stunning vantage points of towering skyscrapers, luxury yachts, and the Ain Dubai. Inside, guests are treated to a massive international buffet, live music, and traditional Tanoura dance performances.",
         fullPlan: [
@@ -259,7 +259,7 @@ const uaeTours = [
         duration: "Full Day",
         type: "Theme Park",
         badgeColor: "#0ea5e9",
-        image: "https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=600&q=80",
+        image: "https://picsum.photos/seed/seaworld/600/400",
         shortDesc: "The region's first marine life theme park featuring immersive realms and incredible habitats.",
         detailedDescription: "SeaWorld Abu Dhabi represents the next generation of marine life parks. Instead of simple tanks, the park is divided into massive, highly immersive 'realms' mimicking natural environments—from the icy poles to the tropical oceans. Highlights include the Endless Ocean realm (the world's largest multi-species aquarium) and cutting-edge interactive rescue and rehabilitation centers.",
         fullPlan: [
@@ -280,7 +280,7 @@ const uaeTours = [
         duration: "1.5 Hours",
         type: "Cultural",
         badgeColor: "#8b5cf6",
-        image: "https://images.unsplash.com/photo-1580227591605-2b4742468d60?auto=format&fit=crop&w=600&q=80",
+        image: "assets/dubai_frame.png",
         shortDesc: "Walk on exactly 150m of glass, bridging the gap between Old Dubai and New Dubai.",
         detailedDescription: "The Dubai Frame is one of the most uniquely shaped buildings globally, acting as a massive metaphorical window representing the city's transformation. As you ride up to the sky deck, you'll look out one side to see the historic, pearl-diving roots of Old Dubai (Deira), and out the other side to see the hyper-modern skyline of Downtown Dubai (Burj Khalifa).",
         fullPlan: [
@@ -301,7 +301,7 @@ const uaeTours = [
         duration: "2-3 Hours",
         type: "Cultural",
         badgeColor: "#8b5cf6",
-        image: "https://images.unsplash.com/photo-1621213442345-0ad337df29ac?auto=format&fit=crop&w=600&q=80",
+        image: "https://picsum.photos/seed/qasralwatan/600/400",
         shortDesc: "Explore the breathtaking working Presidential Palace of the UAE.",
         detailedDescription: "More than just a palace, Qasr Al Watan is a unique testament to the spirit of the UAE's people and its leaders. Previously closed to the public, you can now walk through the immense Great Hall, admire the exquisite Arabian craftsmanship, and visit the incredible 'House of Knowledge' highlighting Arabian contributions to human civilization.",
         fullPlan: [
@@ -326,7 +326,7 @@ for(let i=16; i<=30; i++) {
         duration: "Half Day",
         type: i % 3 === 0 ? "Popular" : "Must Try",
         badgeColor: i % 2 === 0 ? "#10b981" : "#f97316",
-        image: "https://images.unsplash.com/photo-1512453979436-5a50ce8c6bc6?auto=format&fit=crop&w=600&q=80",
+        image: "https://picsum.photos/seed/uaetour" + i + "/600/400",
         shortDesc: "A wonderful additional activity covering thrilling sights and monumental landscapes of the Emirates.",
         detailedDescription: "This comprehensively detailed activity ensures tourists experience everything they could ever want. Featuring guided tours, intense luxury, and perfect photo opportunities, this activity captures the raw essence of visiting the UAE. It is meticulously planned for international tourists who wish to maximize their cultural and adrenaline experiences.",
         fullPlan: [
