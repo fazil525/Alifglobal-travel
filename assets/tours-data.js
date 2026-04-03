@@ -313,30 +313,304 @@ const uaeTours = [
             "Palace in Motion (Evening only): A spectacular light and sound show projected onto the palace facade."
         ],
         inclusions: ["Palace Entry", "Access to Gardens", "Palace In Motion show (evening)"]
+    },
+    // Addition of 15 authentic locations across all other Emirates & Al Ain
+    {
+        id: "al-noor-island",
+        title: "Al Noor Island",
+        location: "Sharjah",
+        price: "AED 50",
+        duration: "2-3 Hours",
+        type: "Romantic",
+        badgeColor: "#10b981",
+        image: "https://picsum.photos/seed/alnoorisland/600/400",
+        shortDesc: "A serene lagoon island featuring a spectacular Butterfly House and light displays.",
+        detailedDescription: "Located in Khalid Lagoon, Al Noor Island is a peaceful retreat blending art, nature, and stunning architecture. The centerpiece is the golden, organically shaped Butterfly House harboring hundreds of exotic species. Walk the illuminated pathways past bespoke art installations and relax by the literature pavilion.",
+        fullPlan: [
+            "Entrance: Cross the beautifully designed footbridge into the island.",
+            "Butterfly House: Walk through the humid tropical biome surrounded by colorful butterflies.",
+            "Art Walk: Follow the winding pathways exploring glowing, custom-made sculptures.",
+            "Literature Pavilion: Relax with a book in the beautifully designed open-air pavilion.",
+            "Gleaming Meadows: Wait until dusk to see the incredible fiber-optic light displays."
+        ],
+        inclusions: ["Island Entry", "Butterfly House Access", "Guided Tour (optional)"]
+    },
+    {
+        id: "sharjah-safari",
+        title: "Sharjah Safari",
+        location: "Sharjah (Al Dhaid)",
+        price: "AED 120",
+        duration: "Half Day",
+        type: "Popular",
+        badgeColor: "#f97316",
+        image: "https://picsum.photos/seed/sharjahsafari/600/400",
+        shortDesc: "The largest safari out of Africa featuring thousands of exotic animals.",
+        detailedDescription: "Experience the ultimate wildlife adventure at Sharjah Safari, covering multiple distinct African environments. From traversing the massive savannahs looking for lions and rhinos to exploring the dense canopy zones, this safari provides an authentic African wildlife experience right in the UAE.",
+        fullPlan: [
+            "Arrival: Check into the visitor center located in the Al Bridi Nature Reserve.",
+            "Into Africa: Walk through the first zones representing African villages.",
+            "The Safari Drive: Board the safari vehicle and traverse the massive open savannahs.",
+            "Lion Encounter: Drive safely through the predators' expansive territory.",
+            "Bird Aviary: Walk through the immersive flying zones."
+        ],
+        inclusions: ["Safari Ticket", "Guided Vehicle Tour", "Access to all zones"]
+    },
+    {
+        id: "sharjah-art-museum",
+        title: "Sharjah Art Museum",
+        location: "Sharjah (Heart of Sharjah)",
+        price: "AED Free",
+        duration: "2 Hours",
+        type: "Cultural",
+        badgeColor: "#8b5cf6",
+        image: "https://picsum.photos/seed/sharjahart/600/400",
+        shortDesc: "The region's leading art museum showcasing incredible Middle Eastern art.",
+        detailedDescription: "Immerse yourself in aesthetic brilliance at the Sharjah Art Museum. As the cultural capital of the Arab World, this massive museum holds one of the largest collections of regional art spanning hundreds of years. The quiet galleries provide perfect escapism and deep insight into Arabic storytelling through paint.",
+        fullPlan: [
+            "Entrance: Explore the beautifully restored historic architecture of the building.",
+            "Permanent Galleries: View works from renowned Orientalist painters.",
+            "Modern Art: Progress to contemporary works from prominent Arab artists.",
+            "Exhibitions: Check out the rotating seasonal exhibits.",
+            "Library & Café: Unwind in the fine arts library or the quiet courtyard cafe."
+        ],
+        inclusions: ["Free Entry", "Audio Guide", "Access to permanent & temporary exhibits"]
+    },
+    {
+        id: "jebel-jais-flight",
+        title: "Jebel Jais Flight (World's Longest Zipline)",
+        location: "Ras Al Khaimah",
+        price: "AED 350",
+        duration: "2-3 Hours",
+        type: "Must Try",
+        badgeColor: "#e11d48",
+        image: "https://picsum.photos/seed/jaisflight/600/400",
+        shortDesc: "Soar across the rugged mountain peaks on the Guinness World Record longest zipline.",
+        detailedDescription: "Unleash your inner thrill-seeker on the Jebel Jais Flight. Suspended across the UAE's highest peak, you will fly face-down in a superhero position at speeds of up to 160km/h over a span of 2.8 kilometers. The combination of pure adrenaline and breathtaking mountainous views is unmatched.",
+        fullPlan: [
+            "Ascent: Drive up the beautifully winding mountain road to the Welcome Center.",
+            "Gearing Up: Professional safety briefing and fitting of harness and helmet.",
+            "The Launch: Step onto the transparent launch platform over the massive canyon.",
+            "The Flight: Soar at incredible speeds covering 2.83 kilometers of mountainous terrain.",
+            "Suspended Platform: Land on a breathtaking glass-bottomed platform suspended mid-air.",
+            "Final Descent: Complete a shorter secondary zipline to reach the ground base."
+        ],
+        inclusions: ["Zipline Flight", "Safety Gear", "Certificate of Completion"]
+    },
+    {
+        id: "suwaidi-pearls",
+        title: "Suwaidi Pearls Farm",
+        location: "Ras Al Khaimah",
+        price: "AED 250",
+        duration: "2 Hours",
+        type: "Cultural",
+        badgeColor: "#8b5cf6",
+        image: "https://picsum.photos/seed/suwaidipearls/600/400",
+        shortDesc: "Discover the historical roots of the UAE's pearl diving heritage on a floating farm.",
+        detailedDescription: "Before the discovery of oil, the UAE's economy relied heavily on the perilous trade of pearl diving. Journey out on a traditional boat to this unique floating pearl farm nestled at the base of the towering Hajar mountains. Learn the incredible history, see how oysters are seeded, and even try opening one yourself.",
+        fullPlan: [
+            "Mangrove Cruise: Depart on a traditional dhow boat through beautiful mangroves.",
+            "History Briefing: Learn the intense history and dangers of deep-sea pearl diving.",
+            "Oyster Seeding: Watch a fascinating demonstration of how modern pearls are cultivated.",
+            "Oyster Opening: Try your luck at opening a living oyster to find a pearl.",
+            "Gift Shop: Trade or purchase beautiful, authentic Arabian pearls."
+        ],
+        inclusions: ["Boat Transfer", "Guided Tour", "Arabic Coffee and Dates"]
+    },
+    {
+        id: "dhayah-fort",
+        title: "Dhayah Fort",
+        location: "Ras Al Khaimah",
+        price: "AED Free",
+        duration: "1 Hour",
+        type: "Cultural",
+        badgeColor: "#8b5cf6",
+        image: "https://picsum.photos/seed/dhayahfort/600/400",
+        shortDesc: "Hike up to the highest hilltop fort in the UAE for 360-degree views of palm oasis.",
+        detailedDescription: "Standing as a symbol of historical resilience, Dhayah Fort is the only surviving hilltop fort in the UAE. After climbing a zig-zagging staircase of rock, you are rewarded with an incredible vantage point over lush date palm gardens, the dramatic Hajar Mountains, and the Arabian Gulf.",
+        fullPlan: [
+            "Arrival: Journey through the sprawling, picturesque palm oasis.",
+            "The Climb: Ascend the 200+ rocky steps to the summit of the hill.",
+            "Exploration: Walk inside the ancient restored mud-brick towers.",
+            "Photography: Take unparalleled photos overlooking the mountains meeting the sea."
+        ],
+        inclusions: ["Free Entry", "Unrestricted Access"]
+    },
+    {
+        id: "snoopy-island",
+        title: "Snoopy Island Snorkeling",
+        location: "Fujairah",
+        price: "AED 150",
+        duration: "3-4 Hours",
+        type: "Popular",
+        badgeColor: "#f97316",
+        image: "https://picsum.photos/seed/snoopyisland/600/400",
+        shortDesc: "Snorkel in crystal-clear waters around an island shaped exactly like Snoopy.",
+        detailedDescription: "Escape to the East Coast of the UAE, facing the Indian Ocean. Snoopy Island, affectionately named for its resemblance to the cartoon dog sleeping on his back, boasts the most vibrant coral reefs in the country. Swim alongside turtles, reef sharks, and thousands of tropical fish.",
+        fullPlan: [
+            "Beach Arrival: Relax on the sandy beaches of Al Aqah.",
+            "Equipment Prep: Collect your snorkel, mask, and fins from the dive center.",
+            "The Swim: Paddle the short distance from the beach out to the rock formation.",
+            "Reef Exploration: Swim slowly around the island to spot sea turtles and vivid corals.",
+            "Beach Relaxation: Head back for lunch and relaxation by the shore."
+        ],
+        inclusions: ["Snorkeling Gear Rental", "Beach Access", "Showers and Lockers"]
+    },
+    {
+        id: "al-badiyah-mosque",
+        title: "Al Badiyah Mosque",
+        location: "Fujairah",
+        price: "AED Free",
+        duration: "45 Mins",
+        type: "Cultural",
+        badgeColor: "#8b5cf6",
+        image: "https://picsum.photos/seed/albadiyah/600/400",
+        shortDesc: "Visit the oldest known functioning mosque in the entire United Arab Emirates.",
+        detailedDescription: "Estimated to date back to the 15th century, Al Badiyah Mosque is a marvel of ancient engineering. Built simply using stone and mud without a single piece of wood, its unique design features four distinct, unequal domes. It offers a deeply humble and fascinating contrast to the mega-mosques of the cities.",
+        fullPlan: [
+            "Arrival: Drive up the beautiful eastern coastal road to the village of Al Badiyah.",
+            "The Mosque: Enter the tiny, cavern-like prayer room (respectful attire required).",
+            "Watchtower Hike: Walk up the hill behind the mosque to two ancient Portuguese watchtowers.",
+            "The View: Look out over the historic village and the sprawling ocean."
+        ],
+        inclusions: ["Free Entry", "Historical Marker Access"]
+    },
+    {
+        id: "fujairah-fort",
+        title: "Fujairah Fort & Heritage Village",
+        location: "Fujairah",
+        price: "AED 5",
+        duration: "1.5 Hours",
+        type: "Cultural",
+        badgeColor: "#8b5cf6",
+        image: "https://picsum.photos/seed/fujairahfort/600/400",
+        shortDesc: "Explore the massive, rugged stone fort that once guarded the coastline.",
+        detailedDescription: "Considered the oldest fort in the UAE (built around 1670), Fujairah Fort was a critical defensive stronghold. Surrounded by a restored Heritage Village, this site showcases exactly what traditional life looked like centuries before modernization, featuring traditional old mud-brick homes and agricultural systems.",
+        fullPlan: [
+            "The Fort: Walk inside the imposing irregular-shaped towers and courtyards.",
+            "Heritage Village: Explore the surrounding reconstructed traditional village.",
+            "Al Yazrah system: See the traditional irrigation setups used for local farming.",
+            "Museum Visit: Take a short walk to the nearby Fujairah Museum to see uncovered artifacts."
+        ],
+        inclusions: ["Fort Entry", "Heritage Village Access"]
+    },
+    {
+        id: "al-ain-zoo",
+        title: "Al Ain Zoo",
+        location: "Al Ain",
+        price: "AED 30",
+        duration: "Half Day",
+        type: "Popular",
+        badgeColor: "#f97316",
+        image: "https://picsum.photos/seed/alainzoo/600/400",
+        shortDesc: "A sprawling conservation park famous for its Arabian species and desert habitats.",
+        detailedDescription: "Founded in 1968 by Sheikh Zayed, this monumental zoo focuses on conservation and spacious, natural enclosures. It is renowned for successfully breeding endangered species like the Arabian Oryx. The zoo also features an enormous man-made safari experience that safely immerses guests among free-roaming wildlife.",
+        fullPlan: [
+            "Arrival: Enter the massive 400-hectare park in the shadow of Jebel Hafeet.",
+            "Big Cat Exhibits: View magnificent white lions, pumas, and cheetahs.",
+            "Feeding Sessions: Participate in interactive giraffe feeding.",
+            "Al Ain Safari: Add on the truck safari experience driving among zebras and rhinos.",
+            "Sheikh Zayed Desert Learning Centre: Learn about the UAE's fragile ecosystems."
+        ],
+        inclusions: ["General Admission", "Access to mostly all enclosures"]
+    },
+    {
+        id: "al-ain-oasis",
+        title: "Al Ain Oasis",
+        location: "Al Ain",
+        price: "AED Free",
+        duration: "2 Hours",
+        type: "Must Try",
+        badgeColor: "#e11d48",
+        image: "https://picsum.photos/seed/alainoasis/600/400",
+        shortDesc: "Walk beneath 147,000 date palms in a UNESCO World Heritage site.",
+        detailedDescription: "The absolute heart of Al Ain ('The Garden City'), this 3,000-acre oasis is an incredibly peaceful escape. It relies on the ancient 'Falaj' irrigation system, a 3,000-year-old network of water channels that keep the massive canopy of date palms vibrant and green against the brutal desert heat.",
+        fullPlan: [
+            "Eco-Centre: Start your visit interpreting the history of the oasis and the falaj.",
+            "The Walk: Wander deep into the intensely shaded, quiet pathways among the palms.",
+            "The Falaj: Observe the running ancient water channels up close.",
+            "Bicycle Rental: Rent a bike to navigate the massive sprawling pathways quickly.",
+            "Al Jahili Fort: Conclude by walking to the nearby majestic circular fort."
+        ],
+        inclusions: ["Free Entry", "Eco-Centre Access"]
+    },
+    {
+        id: "jebel-hafeet",
+        title: "Jebel Hafeet Mountain Drive",
+        location: "Al Ain",
+        price: "AED Free",
+        duration: "1.5 Hours",
+        type: "Romantic",
+        badgeColor: "#10b981",
+        image: "https://picsum.photos/seed/jebelhafeet/600/400",
+        shortDesc: "Drive up one of the greatest driving roads in the world for an epic sunset.",
+        detailedDescription: "Jebel Hafeet towers 1,249 meters over Al Ain. The road cut into its side features 60 corners over 11.7 kilometers and has been hailed as one of the best driving roads globally. The summit provides totally unobstructed views over the golden desert and the green oasis city below.",
+        fullPlan: [
+            "The Ascent: Enjoy the flawlessly paved, curling drive up the limestone mountain.",
+            "Viewing Points: Stop off at the designated parking balconies for photos.",
+            "The Summit: Reach the top before sunset to watch the colors change over Oman and the UAE.",
+            "Mercure Grand Hotel: Grab a coffee or dinner at the hotel built near the summit.",
+            "Green Mubazzarah: Drive back down to dip your feet in the natural hot springs at the mountain's base."
+        ],
+        inclusions: ["Unrestricted Road Access", "Free Parking"]
+    },
+    {
+        id: "ajman-museum",
+        title: "Ajman Museum",
+        location: "Ajman",
+        price: "AED 5",
+        duration: "1 Hour",
+        type: "Cultural",
+        badgeColor: "#8b5cf6",
+        image: "https://picsum.photos/seed/ajmanmuseum/600/400",
+        shortDesc: "An impressive 18th-century fort transformed into a museum showcasing Emirate history.",
+        detailedDescription: "Once the ruler's palace and then a police station, the Ajman Fort is now a beautifully curated museum. It displays a vast collection of archaeological artifacts, centuries-old weapons, and fascinating dioramas depicting traditional life, pearl diving, and folklore.",
+        fullPlan: [
+            "The Courtyard: Enter through the heavy wooden doors and view the central defensive towers.",
+            "Weaponry Room: Inspect authentic swords, daggers, and historic muskets.",
+            "Trading & Pearl Diving: Walk through the rooms explaining traditional survival methods.",
+            "Medical History: Learn about ancient Arabic traditional medicine.",
+            "Souq Diorama: Wander the life-size recreations of historic marketplaces."
+        ],
+        inclusions: ["Museum Entry"]
+    },
+    {
+        id: "al-zorah-reserve",
+        title: "Al Zorah Nature Reserve",
+        location: "Ajman",
+        price: "AED 180",
+        duration: "2-3 Hours",
+        type: "Popular",
+        badgeColor: "#f97316",
+        image: "https://picsum.photos/seed/alzorah/600/400",
+        shortDesc: "Kayak amongst thousands of flamingos in this massive mangrove ecosystem.",
+        detailedDescription: "A sharp contrast to the desert and cityscapes, Al Zorah is a vibrant coastal wetland spanning 1 million square meters of mangrove forest. It is an incredibly rich ecosystem acting as a sanctuary for over 58 species of birds, including massive flocks of elegant pink flamingos.",
+        fullPlan: [
+            "Arrival & Briefing: Meet your guides and get fitted for a life jacket.",
+            "Kayaking: Launch your kayak into the tranquil, shallow waters of the mangroves.",
+            "Bird Watching: Paddle quietly close to the massive flocks of flamingos.",
+            "The Creek: Navigate the complex network of calm tidal creeks.",
+            "Relaxation: Enjoy the pure serenity away from the noise of the city before returning."
+        ],
+        inclusions: ["Kayak Rental", "Life Jacket", "Guided Tour"]
+    },
+    {
+        id: "dreamland-aqua-park",
+        title: "Dreamland Aqua Park",
+        location: "Umm Al Quwain",
+        price: "AED 160",
+        duration: "Full Day",
+        type: "Theme Park",
+        badgeColor: "#0ea5e9",
+        image: "https://picsum.photos/seed/dreamland/600/400",
+        shortDesc: "The UAE's largest family waterpark featuring massive pools and lush green camping.",
+        detailedDescription: "Operating for decades, Dreamland is a beloved institution providing unpretentious, spacious fun. Unlike highly crowded modern parks, it offers over 250,000 square meters of lush green landscapes, massive wave pools, and classic water rides. It also features unique overnight waterside camping options.",
+        fullPlan: [
+            "Wave Pool: Start the day relaxing in the massive central wave pool area.",
+            "The Rides: Take on the Kamikaze, Twister, and Black Hole slides.",
+            "Dead Sea Pool: Float effortlessly in the high-salinity floatation pool.",
+            "Family Rafting: Enjoy the multi-person raft rides down the mini rivers.",
+            "BBQ & Picnic: Wind down by utilizing the open green spaces and picnic areas."
+        ],
+        inclusions: ["All Day Access", "Unlimited Rides", "Free Parking"]
     }
 ];
-
-// Combine an array to 30. (I am generating the structure, duplicating some to meet absolute length for coding requirement, but providing variety)
-for(let i=16; i<=30; i++) {
-    uaeTours.push({
-        id: "bonus-activity-" + i,
-        title: "Spectacular UAE Adventure " + i,
-        location: i % 2 === 0 ? "Dubai" : "Abu Dhabi",
-        price: "AED " + (100 + (i * 10)),
-        duration: "Half Day",
-        type: i % 3 === 0 ? "Popular" : "Must Try",
-        badgeColor: i % 2 === 0 ? "#10b981" : "#f97316",
-        image: "https://picsum.photos/seed/uaetour" + i + "/600/400",
-        shortDesc: "A wonderful additional activity covering thrilling sights and monumental landscapes of the Emirates.",
-        detailedDescription: "This comprehensively detailed activity ensures tourists experience everything they could ever want. Featuring guided tours, intense luxury, and perfect photo opportunities, this activity captures the raw essence of visiting the UAE. It is meticulously planned for international tourists who wish to maximize their cultural and adrenaline experiences.",
-        fullPlan: [
-            "Phase 1: Complimentary luxury pick up from your central hotel.",
-            "Phase 2: Briefing by our expert multilingual guide on safety and history.",
-            "Phase 3: The core experience featuring breathtaking sights and physical activities.",
-            "Phase 4: A relaxing gourmet lunch featuring local culinary delights.",
-            "Phase 5: Exclusive VIP access to secluded viewing zones.",
-            "Phase 6: Comfortable return to your hotel with a digital photo package."
-        ],
-        inclusions: ["VIP Transport", "Expert Guide", "Gourmet Lunch", "Premium Access"]
-    });
-}
