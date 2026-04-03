@@ -16,6 +16,22 @@
 </head>
 <body>
 
+    <!-- Top Contact Bar -->
+    <div class="top-bar" id="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-left">
+                <a href="tel:+971585846355"><span class="icon">📞</span> +971 585846355</a>
+                <a href="mailto:info@alifglobaltravels.com" class="hide-mobile"><span class="icon">📧</span> info@alifglobaltravels.com</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Instagram">📸</a>
+                <a href="#" aria-label="LinkedIn">💼</a>
+                <a href="#contact" class="top-bar-link hide-mobile">Support</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Header Section -->
     <header class="header" id="header">
         <div class="container nav-container">
@@ -101,6 +117,47 @@
         </div>
     </section>
 
+    <!-- Top Destinations Section -->
+    <section class="destinations section" id="destinations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Explore by Destination</h2>
+                <div class="divider"></div>
+                <p class="section-desc">Handpicked tours to the most stunning locations across the globe.</p>
+            </div>
+            <div class="destinations-grid">
+                <a href="#deals" class="dest-card" style="background-image: url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=800&q=80');">
+                    <div class="dest-overlay"></div>
+                    <div class="dest-content">
+                        <h3>Europe</h3>
+                        <p>15+ Holiday Packages</p>
+                    </div>
+                </a>
+                <a href="#deals" class="dest-card" style="background-image: url('https://images.unsplash.com/photo-1540483756294-b2586d5e1dc4?auto=format&fit=crop&w=800&q=80');">
+                    <div class="dest-overlay"></div>
+                    <div class="dest-content">
+                        <h3>Asia</h3>
+                        <p>25+ Holiday Packages</p>
+                    </div>
+                </a>
+                <a href="#deals" class="dest-card" style="background-image: url('https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80');">
+                    <div class="dest-overlay"></div>
+                    <div class="dest-content">
+                        <h3>Africa</h3>
+                        <p>10+ Safari Packages</p>
+                    </div>
+                </a>
+                <a href="#deals" class="dest-card" style="background-image: url('https://images.unsplash.com/photo-1518684079-3c830dcef090?auto=format&fit=crop&w=800&q=80');">
+                    <div class="dest-overlay"></div>
+                    <div class="dest-content">
+                        <h3>Middle East</h3>
+                        <p>Staycations & Tours</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section class="services section" id="services">
         <div class="container">
@@ -141,6 +198,75 @@
                     <h3 class="service-title">Global Visa Services</h3>
                     <p class="service-text">Expert assistance and processing for travel visas to numerous international destinations.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Deals Section -->
+    <section class="deals section" id="deals" style="background-color: var(--color-surface);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Exclusive Deals & Upcoming Holidays</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="deals-grid">
+                <div class="deal-card glass-panel">
+                    <div class="deal-badge">Summer Escape</div>
+                    <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=600&q=80" alt="Bali" class="deal-img">
+                    <div class="deal-info">
+                        <h3>Mesmerizing Bali Trip</h3>
+                        <div class="deal-meta">
+                            <span>🕒 5 Days / 4 Nights</span>
+                            <span>✈️ Flights Included</span>
+                        </div>
+                        <div class="deal-price-row">
+                            <div class="price">
+                                <span class="starting-at">Starting from</span>
+                                <h4>AED 2,499</h4>
+                            </div>
+                            <button class="btn btn-primary btn-sm deal-book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="deal-card glass-panel">
+                    <div class="deal-badge" style="background: #eab308; color: #fff;">Eid Special</div>
+                    <img src="https://images.unsplash.com/photo-1565008576549-57569a49371d?auto=format&fit=crop&w=600&q=80" alt="Georgia" class="deal-img">
+                    <div class="deal-info">
+                        <h3>Best of Georgia</h3>
+                        <div class="deal-meta">
+                            <span>🕒 4 Days / 3 Nights</span>
+                            <span>🏨 4-Star Hotel</span>
+                        </div>
+                        <div class="deal-price-row">
+                            <div class="price">
+                                <span class="starting-at">Starting from</span>
+                                <h4>AED 1,899</h4>
+                            </div>
+                            <button class="btn btn-primary btn-sm deal-book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="deal-card glass-panel">
+                    <div class="deal-badge" style="background: #e11d48; color: #fff;">Hot Deal</div>
+                    <img src="https://images.unsplash.com/photo-1502602898657-3e907a5ea82c?auto=format&fit=crop&w=600&q=80" alt="Paris" class="deal-img">
+                    <div class="deal-info">
+                        <h3>Paris & Swiss Adventure</h3>
+                        <div class="deal-meta">
+                            <span>🕒 7 Days / 6 Nights</span>
+                            <span>🚌 Group Tour</span>
+                        </div>
+                        <div class="deal-price-row">
+                            <div class="price">
+                                <span class="starting-at">Starting from</span>
+                                <h4>AED 4,500</h4>
+                            </div>
+                            <button class="btn btn-primary btn-sm deal-book-btn">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center-btn" style="text-align: center; margin-top: 3rem;">
+                <a href="#contact" class="btn btn-outline" style="color: var(--color-primary); border-color: var(--color-primary);">View All Tours</a>
             </div>
         </div>
     </section>
@@ -336,6 +462,38 @@
                     </div>
                     <button type="submit" class="btn btn-primary btn-full">Send Request</button>
                 </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Travel Confidence Banner -->
+    <section class="confidence-banner" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="confidence-content glass-panel" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%); color: white; padding: 4rem 2rem; border-radius: 20px; text-align: center; position: relative; overflow: hidden; border: none;">
+                <!-- Decorative background elements -->
+                <div style="position: absolute; top: -20px; right: 10px; opacity: 0.1; font-size: 200px;">🛡️</div>
+                <div style="position: absolute; bottom: -50px; left: -20px; opacity: 0.05; font-size: 250px;">🌍</div>
+                
+                <h2 style="font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 1rem; position: relative; z-index: 2; color: #fff;">Alif Travel Shield</h2>
+                <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto 3rem; opacity: 0.9; position: relative; z-index: 2; line-height: 1.6;">Flexibility meets peace of mind. Travel with confidence knowing we have your back every step of the journey, giving you the best options and financial protection.</p>
+                
+                <div class="confidence-features" style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; position: relative; z-index: 2;">
+                    <div class="conf-item" style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.1); padding: 2rem 1.5rem; border-radius: 16px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15); transition: transform 0.3s ease;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🔄</div>
+                        <h4 style="margin-bottom: 0.5rem; color: white; font-size: 1.2rem;">Flexible Amendments</h4>
+                        <p style="font-size: 0.95rem; opacity: 0.8; line-height: 1.5;">Easily make changes to your booking, names, or dates up to 30 days prior to departure.</p>
+                    </div>
+                    <div class="conf-item" style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.1); padding: 2rem 1.5rem; border-radius: 16px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15); transition: transform 0.3s ease;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">❌</div>
+                        <h4 style="margin-bottom: 0.5rem; color: white; font-size: 1.2rem;">Cancellation Protection</h4>
+                        <p style="font-size: 0.95rem; opacity: 0.8; line-height: 1.5;">Credit notes issued in case of visa rejection or emergencies, valid for over a year.</p>
+                    </div>
+                    <div class="conf-item" style="flex: 1; min-width: 250px; background: rgba(255,255,255,0.1); padding: 2rem 1.5rem; border-radius: 16px; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.15); transition: transform 0.3s ease;">
+                        <div style="font-size: 2.5rem; margin-bottom: 1rem;">🎧</div>
+                        <h4 style="margin-bottom: 0.5rem; color: white; font-size: 1.2rem;">24/7 Dedicated Support</h4>
+                        <p style="font-size: 0.95rem; opacity: 0.8; line-height: 1.5;">Access our expert travel team any time before, during, or after your trip.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

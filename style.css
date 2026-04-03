@@ -1076,3 +1076,198 @@ body {
 .skiptranslate iframe, .skiptranslate {
     display: none !important;
 }
+
+/* --- Top Bar --- */
+.top-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #022c16; /* very dark green */
+    color: white;
+    font-size: 0.85rem;
+    padding: 8px 0;
+    z-index: 1001;
+}
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-bar-left, .top-bar-right {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.top-bar a {
+    color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.top-bar a:hover {
+    color: var(--color-accent);
+}
+.hide-mobile {
+    display: flex;
+}
+@media (max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }
+    .top-bar-container {
+        justify-content: center;
+    }
+}
+
+/* Adjust Header to sit below absolute top-bar */
+.header {
+    top: 35px;
+}
+.header.scrolled {
+    top: 0;
+}
+.hero {
+    padding-top: 115px; /* 35 + 80 */
+}
+
+/* --- Destinations Section --- */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+}
+.dest-card {
+    position: relative;
+    border-radius: 16px;
+    height: 320px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    display: block;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal);
+}
+.dest-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+.dest-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0) 100%);
+    transition: opacity var(--transition-fast);
+}
+.dest-card:hover .dest-overlay {
+    opacity: 0.8;
+}
+.dest-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    color: white;
+    z-index: 2;
+}
+.dest-content h3 {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+    transform: translateY(10px);
+    transition: transform var(--transition-fast);
+}
+.dest-content p {
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all var(--transition-fast);
+}
+.dest-card:hover .dest-content h3 {
+    transform: translateY(0);
+}
+.dest-card:hover .dest-content p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Deals Section --- */
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.deal-card {
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.deal-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background-color: var(--color-primary);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    z-index: 2;
+    box-shadow: var(--shadow-sm);
+}
+.deal-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+[data-theme="dark"] .deal-img {
+    border-bottom-color: rgba(255,255,255,0.05);
+}
+.deal-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.deal-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+}
+.deal-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+.deal-price-row {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding-top: 1rem;
+}
+[data-theme="dark"] .deal-price-row {
+    border-top-color: rgba(255,255,255,0.05);
+}
+.starting-at {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.price h4 {
+    font-size: 1.4rem;
+    color: var(--color-primary);
+    margin: 0;
+}
+.btn-sm {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+}

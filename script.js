@@ -225,19 +225,21 @@ if (convertBtn) {
 
 // --- PLAN YOUR TRIP MODAL (WIZARD) ---
 const modal = document.getElementById('trip-modal');
-const openBtn = document.getElementById('open-modal-btn');
+const openBtns = document.querySelectorAll('#open-modal-btn, .deal-book-btn');
 const closeBtn = document.querySelector('.close-modal');
 const steps = document.querySelectorAll('.wizard-step');
 const indicators = document.querySelectorAll('.step');
 const lines = document.querySelectorAll('.step-line');
 let currentStep = 0;
 
-if (modal && openBtn && closeBtn) {
-    openBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Stop background scrolling
-        showStep(0);
+if (modal && closeBtn) {
+    openBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Stop background scrolling
+            showStep(0);
+        });
     });
 
     closeBtn.addEventListener('click', () => {
