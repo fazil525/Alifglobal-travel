@@ -129,7 +129,7 @@ h1, h2, h3, h4 {
 
 /* Header */
 .header {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -1133,7 +1133,8 @@ body {
     top: 35px;
 }
 .header.scrolled {
-    top: 0;
+    /* Keep it exactly where it is natively */
+    top: 35px;
 }
 .hero {
     padding-top: 115px; /* 35 + 80 */
