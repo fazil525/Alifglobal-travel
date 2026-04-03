@@ -53,6 +53,7 @@
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
+            <div class="nav-actions" style="display: flex; align-items: center; gap: 1rem;">
                 <div class="custom-translate">
                     <button class="translate-btn" aria-label="Select Language">
                         <span class="globe-icon">🌐</span> <span class="current-lang">EN</span> <span class="caret">▾</span>
@@ -65,11 +66,11 @@
                         <li data-lang="zh-CN">中文 (Chinese)</li>
                     </ul>
                 </div>
-                <!-- Hidden Google Translate Element -->
-                <div id="google_translate_element" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;"></div>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
-                <button id="open-modal-btn" class="btn btn-primary nav-cta">Plan Your Trip</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;">🌙</button>
+                <button id="open-modal-btn" class="btn btn-primary nav-cta" style="margin-left: 0; padding: 0.6rem 1.2rem; white-space: nowrap;">Plan Your Trip</button>
             </div>
+            <!-- Hidden Google Translate Element -->
+            <div id="google_translate_element" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;"></div>
             <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
