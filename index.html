@@ -43,7 +43,13 @@
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="uae-tours.html" class="nav-link">UAE Tours</a></li>
+                                        <li class="nav-dropdown" style="position: relative;">
+                        <a href="#" class="nav-link dropdown-toggle" aria-haspopup="true">Tours <span class="dropdown-caret">&#x25BE;</span></a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="uae-tours.html" class="dropdown-link">UAE Packages</a></li>
+                            <li><a href="kerala-tourism.html" class="dropdown-link">Kerala Tourism</a></li>
+                        </ul>
+                    </li>
                     <li><a href="events.html" class="nav-link">UAE Events</a></li>
                     <li><a href="index.html#services" class="nav-link">Services</a></li>
                     <li><a href="travel-resources.html" class="nav-link">Travel Tools</a></li>
@@ -580,6 +586,7 @@
         </svg>
     </a>
 
+    <script src="assets/countries.js"></script>
     <script src="script.js?v=3.3"></script>
 </body>
 </html>

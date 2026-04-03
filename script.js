@@ -1,4 +1,4 @@
-﻿// Mobile navigation toggle
+// Mobile navigation toggle
 const mobileToggle = document.getElementById('mobile-toggle');
 const nav = document.querySelector('.nav');
 const header = document.getElementById('header');
@@ -156,11 +156,14 @@ if (checkVisaBtn && visaResult) {
         let bgColor = '';
         let color = '';
         
+        const premiumNations = ['United States of America', 'United Kingdom', 'Australia', 'Canada', 'New Zealand', 'Singapore', 'Japan', 'South Korea', 'Germany', 'France', 'Italy', 'Spain'];
+        const eNations = ['India', 'China', 'Russia', 'South Africa', 'Mexico', 'Philippines', 'Pakistan', 'Bangladesh'];
+        
         if (dest === 'UAE') {
-            if (['US', 'UK', 'EU', 'AU'].includes(nat)) {
+            if (premiumNations.includes(nat)) {
                 status = 'Visa on Arrival Available (30/90 Days) ✅';
                 bgColor = '#d1fae5'; color = '#065f46';
-            } else if (['IN'].includes(nat)) {
+            } else if (nat === 'India') {
                 status = 'Visa on Arrival (if holds US/UK/EU visa) or E-Visa Required 🛂';
                 bgColor = '#fef3c7'; color = '#92400e';
             } else {
@@ -168,7 +171,7 @@ if (checkVisaBtn && visaResult) {
                 bgColor = '#fee2e2'; color = '#991b1b';
             }
         } else if (dest === 'OMAN') {
-            if (['US', 'UK', 'EU', 'AU', 'IN', 'CN', 'RU'].includes(nat)) {
+            if (premiumNations.includes(nat) || nat === 'India' || nat === 'China' || nat === 'Russia') {
                 status = 'Visa Free (14 Days) or E-Visa Available ✅';
                 bgColor = '#d1fae5'; color = '#065f46';
             } else {
