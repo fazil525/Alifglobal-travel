@@ -88,6 +88,35 @@
     <!-- UAE Tours Grid Container -->
     <section class="section" style="background-color: var(--color-bg);">
         <div class="container">
+            <!-- Filter Section -->
+            <div class="filters-container glass-panel" style="margin-bottom: 2.5rem; padding: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; background: var(--color-surface); border-radius: 12px; box-shadow: var(--shadow-sm);">
+                <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; flex: 1;">
+                    <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                        <label for="filter-emirate" style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Location</label>
+                        <select id="filter-emirate" class="form-control" style="min-width: 220px; padding: 12px; border-radius: 8px; cursor: pointer;">
+                            <option value="All">All Emirates</option>
+                            <option value="Dubai">Dubai</option>
+                            <option value="Abu Dhabi">Abu Dhabi</option>
+                        </select>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                        <label for="filter-type" style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Category</label>
+                        <select id="filter-type" class="form-control" style="min-width: 220px; padding: 12px; border-radius: 8px; cursor: pointer;">
+                            <option value="All">All Categories</option>
+                            <option value="Must Try">Must Try</option>
+                            <option value="Popular">Popular</option>
+                            <option value="Cultural">Cultural</option>
+                            <option value="Theme Park">Theme Park</option>
+                            <option value="Romantic">Romantic</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="text-align: right; background: rgba(16, 185, 129, 0.1); padding: 10px 20px; border-radius: 30px; border: 1px solid rgba(16, 185, 129, 0.2);">
+                    <span id="results-count" style="font-weight: 800; color: var(--color-primary); font-size: 1.2rem;">0</span> 
+                    <span style="color: var(--color-text-main); font-weight: 600; font-size: 0.9rem;">Activities</span>
+                </div>
+            </div>
+
             <div class="deals-grid" id="uae-tours-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem;">
                 <!-- Dynamically populated by JS from assets/tours-data.js -->
             </div>
@@ -236,12 +265,24 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const grid = document.getElementById('uae-tours-grid');
+            const alertCount = document.getElementById('results-count');
+            const filterEmirate = document.getElementById('filter-emirate');
+            const filterType = document.getElementById('filter-type');
+            
             const modal = document.getElementById('activity-detail-modal');
             const closeModal = document.getElementById('close-activity-modal');
 
-            if(grid && typeof uaeTours !== 'undefined') {
+            function renderTours(toursToRender) {
+                if(!grid) return;
                 grid.innerHTML = '';
-                uaeTours.forEach(tour => {
+                alertCount.textContent = toursToRender.length;
+                
+                if (toursToRender.length === 0) {
+                    grid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--color-text-muted);"><h3>No activities found matching your criteria.</h3><p>Try adjusting your filters to see more results.</p></div>';
+                    return;
+                }
+
+                toursToRender.forEach(tour => {
                     const card = document.createElement('div');
                     card.className = 'deal-card glass-panel';
                     card.style.cursor = 'pointer';
@@ -270,6 +311,30 @@
                     `;
                     grid.appendChild(card);
                 });
+            }
+
+            function applyFilters() {
+                const emirateVal = filterEmirate.value;
+                const typeVal = filterType.value;
+                
+                let filtered = uaeTours;
+                
+                if (emirateVal !== 'All') {
+                    filtered = filtered.filter(t => t.location.toLowerCase().includes(emirateVal.toLowerCase()));
+                }
+                
+                if (typeVal !== 'All') {
+                    filtered = filtered.filter(t => t.type === typeVal);
+                }
+                
+                renderTours(filtered);
+            }
+
+            if(typeof uaeTours !== 'undefined') {
+                renderTours(uaeTours);
+                
+                if(filterEmirate) filterEmirate.addEventListener('change', applyFilters);
+                if(filterType) filterType.addEventListener('change', applyFilters);
             }
 
             window.openActivityModal = function(id) {
