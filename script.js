@@ -1,4 +1,4 @@
-// Mobile navigation toggle
+﻿// Mobile navigation toggle
 const mobileToggle = document.getElementById('mobile-toggle');
 const nav = document.querySelector('.nav');
 const header = document.getElementById('header');
