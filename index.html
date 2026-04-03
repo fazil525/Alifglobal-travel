@@ -397,6 +397,29 @@
                     </div>
                     <button id="convert-btn" class="btn btn-outline btn-full" style="margin-top: 1rem; color: var(--color-primary); border-color: var(--color-primary);">Convert Currency</button>
                 </div>
+
+                <!-- Weather Widget -->
+                <div class="tool-card glass-panel" style="padding: 2.5rem; background: var(--color-bg);">
+                    <h3 class="tool-title" style="margin-bottom: 1.5rem;">🌤️ Live Weather</h3>
+                    <div class="form-group">
+                        <label style="display:block; margin-bottom: 0.5rem; color: var(--color-text-main); font-weight: 600;">Select City</label>
+                        <select id="weather-city" class="form-control">
+                            <option value="dubai">Dubai, UAE</option>
+                            <option value="abu dhabi">Abu Dhabi, UAE</option>
+                            <option value="muscat">Muscat, Oman</option>
+                            <option value="london">London, UK</option>
+                            <option value="paris">Paris, France</option>
+                        </select>
+                    </div>
+                    <div id="weather-result" style="margin-top: 1.5rem; padding: 1.5rem; border-radius: 12px; background: rgba(0, 108, 53, 0.05); text-align: center; border: 1px solid rgba(0, 108, 53, 0.1);">
+                        <div id="weather-temp" style="font-size: 2.5rem; font-weight: 800; color: var(--color-primary); line-height: 1;">--°C</div>
+                        <div id="weather-desc" style="font-size: 1.1rem; color: var(--color-text-main); margin-top: 0.5rem; font-weight: 500;">Loading...</div>
+                        <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; font-size: 0.9rem; color: var(--color-text-muted);">
+                            <span title="Humidity">💧 <span id="weather-humidity">--</span>%</span>
+                            <span title="Wind Speed">💨 <span id="weather-wind">--</span> km/h</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

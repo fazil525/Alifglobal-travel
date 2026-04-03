@@ -223,6 +223,69 @@ if (convertBtn) {
     });
 }
 
+// --- LIVE WEATHER FORECAST ---
+const weatherCitySelect = document.getElementById('weather-city');
+const tempEl = document.getElementById('weather-temp');
+const descEl = document.getElementById('weather-desc');
+const humidityEl = document.getElementById('weather-humidity');
+const windEl = document.getElementById('weather-wind');
+
+const cityCoordinates = {
+    'dubai': { lat: 25.2048, lon: 55.2708 },
+    'abu dhabi': { lat: 24.4539, lon: 54.3773 },
+    'muscat': { lat: 23.5880, lon: 58.3829 },
+    'london': { lat: 51.5074, lon: -0.1278 },
+    'paris': { lat: 48.8566, lon: 2.3522 }
+};
+
+// Transform WMO Weather codes to readable text
+function getWeatherDescription(code) {
+    if (code === 0) return 'Clear sky ☀️';
+    if (code === 1 || code === 2 || code === 3) return 'Partly cloudy ⛅';
+    if (code === 45 || code === 48) return 'Foggy 🌫️';
+    if (code >= 51 && code <= 55) return 'Drizzle 🌧️';
+    if (code >= 56 && code <= 57) return 'Freezing Drizzle 🌧️';
+    if (code >= 61 && code <= 65) return 'Rain ☔';
+    if (code >= 66 && code <= 67) return 'Freezing Rain ☔';
+    if (code >= 71 && code <= 77) return 'Snow ❄️';
+    if (code >= 80 && code <= 82) return 'Rain showers 🌧️';
+    if (code >= 95 && code <= 99) return 'Thunderstorm ⛈️';
+    return 'Unknown';
+}
+
+async function fetchWeather(city) {
+    if (!tempEl) return;
+    const coords = cityCoordinates[city];
+    if (!coords) return;
+    
+    tempEl.innerText = '...';
+    descEl.innerText = 'Fetching...';
+    
+    try {
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${coords.lat}&longitude=${coords.lon}&current=temperature_2m,relative_humidity_2m,weather_code,wind_speed_10m`;
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        if (data && data.current) {
+            tempEl.innerText = `${Math.round(data.current.temperature_2m)}°C`;
+            descEl.innerText = getWeatherDescription(data.current.weather_code);
+            humidityEl.innerText = data.current.relative_humidity_2m;
+            windEl.innerText = data.current.wind_speed_10m;
+        }
+    } catch (error) {
+        console.error("Weather fetch error:", error);
+        descEl.innerText = 'Unable to load';
+    }
+}
+
+if (weatherCitySelect) {
+    weatherCitySelect.addEventListener('change', (e) => {
+        fetchWeather(e.target.value);
+    });
+    // Initial fetch for default value
+    fetchWeather(weatherCitySelect.value);
+}
+
 // --- PLAN YOUR TRIP MODAL (WIZARD) ---
 const modal = document.getElementById('trip-modal');
 const openBtns = document.querySelectorAll('#open-modal-btn, .deal-book-btn');
