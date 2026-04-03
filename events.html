@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Live Events across the United Arab Emirates. Concerts, Sports, and Theater.">
+    <title>Live UAE Events - Alif Global Travel</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3.0">
+</head>
+<body>
+
+    <!-- Top Contact Bar -->
+    <div class="top-bar" id="top-bar">
+        <div class="container top-bar-container">
+            <div class="top-bar-left">
+                <a href="tel:+971585846355"><span class="icon">📞</span> +971 585846355</a>
+                <a href="mailto:info@alifglobaltravels.com" class="hide-mobile"><span class="icon">📧</span> info@alifglobaltravels.com</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="https://alifsafetyuae.com" target="_blank" class="top-bar-link hide-mobile" style="color: #eab308; font-weight: bold;"><span class="icon">🏢</span> Sister Company: Alif Safety</a>
+                <a href="#" aria-label="Facebook">📘</a>
+                <a href="#" aria-label="Instagram">📸</a>
+                <a href="#" aria-label="LinkedIn">💼</a>
+                <a href="#contact" class="top-bar-link hide-mobile">Support</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Alif Global Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="company-name">Alif Global</span>
+                    <span class="company-sub">Travel & Tourism LLC</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="uae-tours.html" class="nav-link">UAE Tours</a></li>
+                    <li><a href="events.html" class="nav-link active">UAE Events</a></li>
+                    <li><a href="index.html#services" class="nav-link">Services</a></li>
+                    <li><a href="index.html#tools" class="nav-link">Travel Tools</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">🌙</button>
+                <div class="custom-translate" style="margin-left: 10px;">
+                    <button class="translate-btn" aria-label="Select Language">
+                        <span class="globe-icon">🌐</span> <span class="current-lang">EN</span> <span class="caret">▾</span>
+                    </button>
+                    <ul class="translate-dropdown">
+                        <li data-lang="en">English</li>
+                        <li data-lang="ar">العربية (Arabic)</li>
+                        <li data-lang="ru">Русский (Russian)</li>
+                        <li data-lang="hi">हिन्दी (Hindi)</li>
+                        <li data-lang="zh-CN">中文 (Chinese)</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Hidden Google Translate Element -->
+            <div id="google_translate_element" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;"></div>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Events Hero Section -->
+    <section class="page-hero" style="background: linear-gradient(rgba(2, 44, 22, 0.8), rgba(2, 44, 22, 0.9)), url('assets/hero.png') center/cover; padding: 150px 0 80px; text-align: center; color: white;">
+        <div class="container">
+            <h1 style="font-family: var(--font-heading); font-size: 3.5rem; margin-bottom: 1rem;">Live UAE Events</h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9;">Discover top concerts, sports, and live shows happening across the Emirates. Fetched dynamically using real-time ticketing platforms.</p>
+        </div>
+    </section>
+
+    <!-- Events Grid Container -->
+    <section class="section" style="background-color: var(--color-bg); min-height: 50vh;">
+        <div class="container">
+            <!-- Filter Section -->
+            <div class="filters-container glass-panel" style="margin-bottom: 2.5rem; padding: 1.5rem; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; background: var(--color-surface); border-radius: 12px; box-shadow: var(--shadow-sm);">
+                <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; flex: 1;">
+                    <div style="display: flex; flex-direction: column; gap: 0.4rem;">
+                        <label for="filter-segment" style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Event Type</label>
+                        <select id="filter-segment" class="form-control" style="min-width: 220px; padding: 12px; border-radius: 8px; cursor: pointer;">
+                            <option value="">All Events</option>
+                            <option value="Music">Music</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Arts & Theatre">Arts & Theatre</option>
+                            <option value="Family">Family</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="text-align: right; background: rgba(16, 185, 129, 0.1); padding: 10px 20px; border-radius: 30px; border: 1px solid rgba(16, 185, 129, 0.2);">
+                    <span id="events-count" style="font-weight: 800; color: var(--color-primary); font-size: 1.2rem;">0</span> 
+                    <span style="color: var(--color-text-main); font-weight: 600; font-size: 0.9rem;">Upcoming Shows</span>
+                </div>
+            </div>
+
+            <div class="deals-grid" id="events-grid" style="grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem;">
+                <!-- Populated dynamically -->
+                <div id="loading-spinner" style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--color-text-muted);">
+                    <h3 style="font-family: var(--font-heading); color: var(--color-primary);">Fetching Live Events...</h3>
+                    <p>Securing the latest data from Ticketmaster.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logo.png" alt="Alif Global Logo" class="footer-logo">
+                    <p class="footer-text">Creating seamless and extraordinary travel experiences globally.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="uae-tours.html">UAE Tours</a></li>
+                        <li><a href="events.html">UAE Events</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Alif Global Travel & Tourism LLC. All Rights Reserved.</p>
+                <div class="alif-group">A subsidiary of <strong>Alif Group</strong></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'en,ar,ru,hi,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <script src="script.js?v=3.0"></script>
+    
+    <!-- Dynamic Events Fetch Logic -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const API_KEY = "EJoIEuyShvhYqvIJQ9JzgaKD9u0UDTMx";
+            const COUNTRY_CODE = "AE";
+            
+            const eventsGrid = document.getElementById('events-grid');
+            const eventsCount = document.getElementById('events-count');
+            const filterSegment = document.getElementById('filter-segment');
+            
+            let allEvents = [];
+
+            async function fetchEvents() {
+                try {
+                    const url = `https://app.ticketmaster.com/discovery/v2/events.json?countryCode=${COUNTRY_CODE}&apikey=${API_KEY}&size=30&sort=date,asc`;
+                    const response = await fetch(url);
+                    const data = await response.json();
+                    
+                    if (data._embedded && data._embedded.events) {
+                        allEvents = data._embedded.events;
+                        renderEvents(allEvents);
+                    } else {
+                        eventsGrid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem;"><h3>No upcoming events found.</h3><p>Please try checking back later.</p></div>';
+                        eventsCount.textContent = "0";
+                    }
+                } catch (error) {
+                    console.error("Error fetching Ticketmaster events:", error);
+                    eventsGrid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: #ef4444;"><h3>Error loading events</h3><p>Could not connect to the ticketing server. Please ensure your connection is active.</p></div>';
+                }
+            }
+            
+            function renderEvents(eventsArray) {
+                eventsGrid.innerHTML = '';
+                eventsCount.textContent = eventsArray.length;
+                
+                if (eventsArray.length === 0) {
+                    eventsGrid.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 3rem; color: var(--color-text-muted);"><h3>No events match this filter.</h3></div>';
+                    return;
+                }
+
+                eventsArray.forEach(ev => {
+                    const card = document.createElement('div');
+                    card.className = 'deal-card glass-panel';
+                    card.style.display = 'flex';
+                    card.style.flexDirection = 'column';
+                    card.style.height = '100%';
+                    
+                    // Try to find a good 16:9 image
+                    let imgUrl = "https://picsum.photos/seed/event/600/400";
+                    if (ev.images && ev.images.length > 0) {
+                        const goodImg = ev.images.find(img => img.ratio === "16_9" && img.width > 600);
+                        imgUrl = goodImg ? goodImg.url : ev.images[0].url;
+                    }
+                    
+                    // Parse Data
+                    const dateObj = new Date(ev.dates.start.dateTime || ev.dates.start.localDate);
+                    const formattedDate = dateObj.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric', year:'numeric' });
+                    const formattedTime = ev.dates.start.localTime ? ev.dates.start.localTime.substring(0,5) : 'TBA';
+                    
+                    const venue = (ev._embedded && ev._embedded.venues && ev._embedded.venues[0]) ? ev._embedded.venues[0].name : "Multiple Venues";
+                    const segment = (ev.classifications && ev.classifications[0] && ev.classifications[0].segment) ? ev.classifications[0].segment.name : "Event";
+                    
+                    card.innerHTML = `
+                        <div class="deal-badge" style="background: var(--color-primary); color: #fff;">${segment}</div>
+                        <img src="${imgUrl}" alt="${ev.name}" class="deal-img" style="height: 200px; object-fit: cover;">
+                        <div class="deal-info" style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+                            <div>
+                                <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem; line-height: 1.3;">${ev.name}</h3>
+                                <div class="deal-meta" style="flex-wrap: wrap; gap: 0.5rem; flex-direction: column; align-items: flex-start; margin-bottom: 1rem;">
+                                    <span style="color: var(--color-accent); font-weight: 600;">📅 ${formattedDate} at ${formattedTime}</span>
+                                    <span>📍 ${venue}</span>
+                                </div>
+                            </div>
+                            <a href="${ev.url}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-full" style="text-align: center; margin-top: auto;">Buy Tickets 🎟️</a>
+                        </div>
+                    `;
+                    eventsGrid.appendChild(card);
+                });
+            }
+            
+            // Filter listener
+            filterSegment.addEventListener('change', (e) => {
+                const term = e.target.value.toLowerCase();
+                if(!term) {
+                    renderEvents(allEvents);
+                    return;
+                }
+                const filtered = allEvents.filter(ev => {
+                    const seg = (ev.classifications && ev.classifications[0] && ev.classifications[0].segment) ? ev.classifications[0].segment.name.toLowerCase() : "";
+                    return seg.includes(term);
+                });
+                renderEvents(filtered);
+            });
+
+            // Init
+            fetchEvents();
+        });
+    </script>
+</body>
+</html>
