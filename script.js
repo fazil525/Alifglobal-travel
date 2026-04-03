@@ -231,11 +231,56 @@ const humidityEl = document.getElementById('weather-humidity');
 const windEl = document.getElementById('weather-wind');
 
 const cityCoordinates = {
+    // Middle East & Africa
     'dubai': { lat: 25.2048, lon: 55.2708 },
-    'abu dhabi': { lat: 24.4539, lon: 54.3773 },
+    'abu_dhabi': { lat: 24.4539, lon: 54.3773 },
     'muscat': { lat: 23.5880, lon: 58.3829 },
+    'doha': { lat: 25.2854, lon: 51.5310 },
+    'riyadh': { lat: 24.7136, lon: 46.6753 },
+    'cairo': { lat: 30.0444, lon: 31.2357 },
+    'cape_town': { lat: -33.9249, lon: 18.4241 },
+    'marrakech': { lat: 31.6295, lon: -7.9811 },
+    
+    // Europe
     'london': { lat: 51.5074, lon: -0.1278 },
-    'paris': { lat: 48.8566, lon: 2.3522 }
+    'paris': { lat: 48.8566, lon: 2.3522 },
+    'rome': { lat: 41.9028, lon: 12.4964 },
+    'barcelona': { lat: 41.3851, lon: 2.1734 },
+    'amsterdam': { lat: 52.3676, lon: 4.9041 },
+    'istanbul': { lat: 41.0082, lon: 28.9784 },
+    'athens': { lat: 37.9838, lon: 23.7275 },
+    'vienna': { lat: 48.2082, lon: 16.3738 },
+    'prague': { lat: 50.0755, lon: 14.4378 },
+    'zurich': { lat: 47.3769, lon: 8.5417 },
+    'berlin': { lat: 52.5200, lon: 13.4050 },
+    
+    // Asia
+    'bangkok': { lat: 13.7563, lon: 100.5018 },
+    'phuket': { lat: 7.8804, lon: 98.3922 },
+    'tokyo': { lat: 35.6762, lon: 139.6503 },
+    'kyoto': { lat: 35.0116, lon: 135.7681 },
+    'singapore': { lat: 1.3521, lon: 103.8198 },
+    'bali': { lat: -8.4095, lon: 115.1889 },
+    'kuala_lumpur': { lat: 3.1390, lon: 101.6869 },
+    'ho_chi_minh': { lat: 10.8231, lon: 106.6297 },
+    'seoul': { lat: 37.5665, lon: 126.9780 },
+    'male': { lat: 4.1755, lon: 73.5093 },
+    'mumbai': { lat: 19.0760, lon: 72.8777 },
+    
+    // North America
+    'new_york': { lat: 40.7128, lon: -74.0060 },
+    'los_angeles': { lat: 34.0522, lon: -118.2437 },
+    'miami': { lat: 25.7617, lon: -80.1918 },
+    'las_vegas': { lat: 36.1699, lon: -115.1398 },
+    'toronto': { lat: 43.6510, lon: -79.3470 },
+    'cancun': { lat: 21.1619, lon: -86.8515 },
+    
+    // South America & Oceania
+    'rio': { lat: -22.9068, lon: -43.1729 },
+    'buenos_aires': { lat: -34.6037, lon: -58.3816 },
+    'sydney': { lat: -33.8688, lon: 151.2093 },
+    'auckland': { lat: -36.8485, lon: 174.7633 },
+    'fiji': { lat: -17.7134, lon: 178.0650 }
 };
 
 // Transform WMO Weather codes to readable text
