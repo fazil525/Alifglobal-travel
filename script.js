@@ -384,3 +384,24 @@ if (translateContainer && translateBtn) {
         });
     });
 }
+
+// --- VIEW ALL TOURS LOGIC ---
+const viewAllBtn = document.getElementById('view-all-tours-btn');
+const hiddenDeals = document.querySelectorAll('.hidden-deal');
+
+if (viewAllBtn && hiddenDeals.length > 0) {
+    viewAllBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isHidden = hiddenDeals[0].style.getPropertyValue('display') === 'none' || hiddenDeals[0].style.display === 'none';
+        
+        hiddenDeals.forEach(deal => {
+            if (isHidden) {
+                deal.style.setProperty('display', 'flex', 'important');
+            } else {
+                deal.style.setProperty('display', 'none', 'important');
+            }
+        });
+        
+        viewAllBtn.textContent = isHidden ? 'Show Less Tours' : 'View All Tours';
+    });
+}
