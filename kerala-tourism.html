@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -43,7 +43,13 @@
             <nav class="nav">
                 <ul class="nav-list">
                     <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="uae-tours.html" class="nav-link active">UAE Tours</a></li>
+                    <li class="nav-dropdown" style="position: relative;">
+                        <a href="#" class="nav-link dropdown-toggle active" aria-haspopup="true">Tours <span class="dropdown-caret">&#x25BE;</span></a>
+                        <ul class="nav-dropdown-menu">
+                            <li><a href="uae-tours.html" class="dropdown-link">UAE Tours & Packages</a></li>
+                            <li><a href="kerala-tourism.html" class="dropdown-link">Kerala Tours & Packages</a></li>
+                        </ul>
+                    </li>
                     <li><a href="events.html" class="nav-link">UAE Events</a></li>
                     <li><a href="index.html#services" class="nav-link">Services</a></li>
                     <li><a href="travel-resources.html" class="nav-link">Travel Tools</a></li>
@@ -76,11 +82,11 @@
         </div>
     </header>
 
-    <!-- UAE Tours Hero Section -->
-    <section class="page-hero" style="background: linear-gradient(rgba(2, 44, 22, 0.8), rgba(2, 44, 22, 0.9)), url('assets/hero.png') center/cover; padding: 150px 0 80px; text-align: center; color: white;">
+    <!-- Kerala Tourism Hero Section -->
+    <section class="page-hero" style="background: linear-gradient(rgba(2, 44, 22, 0.8), rgba(2, 44, 22, 0.9)), url('https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=1920&q=80') center/cover; padding: 150px 0 80px; text-align: center; color: white;">
         <div class="container">
-            <h1 style="font-family: var(--font-heading); font-size: 3.5rem; margin-bottom: 1rem;">UAE Activities & Tours</h1>
-            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9;">Discover the very best things to do in Dubai and Abu Dhabi. From record-breaking heights to cultural marvels, explore our comprehensive guide to UAE's top attractions.</p>
+            <h1 style="font-family: var(--font-heading); font-size: 3.5rem; margin-bottom: 1rem;">Kerala Tours & Packages</h1>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto; opacity: 0.9;">Discover "God's Own Country", Kerala, India. From emerald backwaters and misty tea gardens to roaring waterfalls and serene beaches, explore our premium curated holidays.</p>
         </div>
     </section>
 
@@ -94,14 +100,11 @@
                         <label for="filter-emirate" style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Location</label>
                         <select id="filter-emirate" class="form-control" style="min-width: 220px; padding: 12px; border-radius: 8px; cursor: pointer;">
                             <option value="All">All Locations</option>
-                            <option value="Dubai">Dubai</option>
-                            <option value="Abu Dhabi">Abu Dhabi</option>
-                            <option value="Sharjah">Sharjah</option>
-                            <option value="Ras Al Khaimah">Ras Al Khaimah</option>
-                            <option value="Fujairah">Fujairah</option>
-                            <option value="Al Ain">Al Ain</option>
-                            <option value="Ajman">Ajman</option>
-                            <option value="Umm Al Quwain">Umm Al Quwain</option>
+                            <option value="Munnar">Munnar</option>
+                            <option value="Alleppey">Alleppey</option>
+                            <option value="Thekkady">Thekkady</option>
+                            <option value="Wayanad">Wayanad</option>
+                            <option value="Trivandrum">Trivandrum</option>
                         </select>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 0.4rem;">
@@ -163,6 +166,19 @@
             </div>
         </div>
     </div>
+
+    <!-- Explore Map Section -->
+    <section class="section map-section" style="background-color: var(--color-surface); padding-top: 0;">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h2 style="font-family: var(--font-heading); font-size: 2.5rem; color: var(--color-primary); margin-bottom: 0.5rem;">Explore Kerala Destinations</h2>
+                <p style="color: var(--color-text-muted); font-size: 1.1rem;">Navigate through God's Own Country and discover where our premium packages take you.</p>
+            </div>
+            <div class="map-container glass-panel">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3928.729906660144!2d76.27415171520698!3d10.040182592823674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080d36c53d9eeb%3A0xad5f096739eb3b38!2sKerala%2C%20India!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -268,7 +284,7 @@
 
     <script src="assets/countries.js"></script>
     <script src="script.js?v=3.3"></script>
-    <script src="assets/tours-data.js"></script>
+    <script src="assets/kerala-tours-data.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const grid = document.getElementById('uae-tours-grid');
@@ -324,7 +340,7 @@
                 const emirateVal = filterEmirate.value;
                 const typeVal = filterType.value;
                 
-                let filtered = uaeTours;
+                let filtered = keralaTours;
                 
                 if (emirateVal !== 'All') {
                     filtered = filtered.filter(t => t.location.toLowerCase().includes(emirateVal.toLowerCase()));
@@ -337,15 +353,15 @@
                 renderTours(filtered);
             }
 
-            if(typeof uaeTours !== 'undefined') {
-                renderTours(uaeTours);
+            if(typeof keralaTours !== 'undefined') {
+                renderTours(keralaTours);
                 
                 if(filterEmirate) filterEmirate.addEventListener('change', applyFilters);
                 if(filterType) filterType.addEventListener('change', applyFilters);
             }
 
             window.openActivityModal = function(id) {
-                const tour = uaeTours.find(t => t.id === id);
+                const tour = keralaTours.find(t => t.id === id);
                 if(!tour) return;
                 
                 document.getElementById('activity-modal-badge').textContent = tour.type;

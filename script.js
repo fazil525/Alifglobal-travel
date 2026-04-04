@@ -22,7 +22,14 @@ mobileToggle.addEventListener('click', () => {
 // Close mobile menu when clicking a link
 const navLinks = document.querySelectorAll('.nav-link');
 navLinks.forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+        if (link.classList.contains('dropdown-toggle') && window.innerWidth <= 768) {
+            e.preventDefault();
+            const parent = link.closest('.nav-dropdown');
+            parent.classList.toggle('mobile-open');
+            return;
+        }
+
         nav.classList.remove('active');
         const spans = mobileToggle.querySelectorAll('span');
         spans[0].style.transform = 'none';
